@@ -43,6 +43,9 @@ module.exports = {
         // environment variable
         PORT: 3000,
         NODE_ENV: 'development',
+        OPENAI_API_KEY:
+          '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',
+        ADMIN_MNEMONIC: 'denial kitchen pet squirrel other broom bar gas better priority spoil cross',
       },
     },
   ],

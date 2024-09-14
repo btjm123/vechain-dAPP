@@ -4783,6 +4783,15 @@
     "@openzeppelin/contracts-upgradeable" "^5.0.2"
     ethers "^6.9.0"
 
+"@vechain/vebetterdao-contracts@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@vechain/vebetterdao-contracts/-/vebetterdao-contracts-2.0.0.tgz#a72e3642e284c4a408653327c5aedb9e5cda35a4"
+  integrity sha512-2Q/OsRiC8VRZp6+IAel4ZyL/sFK6SEw60dLf8uBd8E4jM5ieYaqamCYgeJg0H7tc9BvDX0PHclQiU1FFb3i3HA==
+  dependencies:
+    "@openzeppelin/contracts" "^5.0.2"
+    "@openzeppelin/contracts-upgradeable" "^5.0.2"
+    ethers "^6.9.0"
+
 "@vitejs/plugin-react@^4.2.1":
   version "4.3.0"
   resolved "https://registry.npmjs.org/@vitejs/plugin-react/-/plugin-react-4.3.0.tgz"
@@ -9527,7 +9536,7 @@ hardhat-gas-reporter@^1.0.8:
     eth-gas-reporter "^0.2.25"
     sha1 "^1.1.1"
 
-hardhat@^2.12.6:
+hardhat@^2.19.1:
   version "2.22.10"
   resolved "https://registry.yarnpkg.com/hardhat/-/hardhat-2.22.10.tgz#826ab56e47af98406e6dd105ba6d2dbb148013d9"
   integrity sha512-JRUDdiystjniAvBGFmJRsiIZSOP2/6s++8xRDe3TzLeQXlWWHsXBrd9wd3JWFyKXvgMqMeLL5Sz/oNxXKYw9vg==

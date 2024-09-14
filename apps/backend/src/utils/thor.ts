@@ -2,6 +2,7 @@ import { ADMIN_PRIVATE_KEY, NETWORK_URL } from '../config';
 import { HttpClient, ThorClient, VeChainPrivateKeySigner, VeChainProvider } from '@vechain/sdk-network';
 import { EcoEarnABI } from '@utils/const';
 import { ECO_SOL_ABI, config } from '@repo/config-contract';
+import { X2EarnRewardsPool } from '@vechain/vebetterdao-contracts';
 
 export const thor = new ThorClient(new HttpClient(NETWORK_URL), {
   isPollingEnabled: false,
@@ -12,3 +13,9 @@ export const ecoEarnContract = thor.contracts.load(
   ECO_SOL_ABI,
   new VeChainPrivateKeySigner(Buffer.from(ADMIN_PRIVATE_KEY), new VeChainProvider(thor)),
 );
+
+export const X2EarnRewardsPoolContract = thor.contracts.load(
+  X2EarnRewardsPool.address.testnet,
+  X2EarnRewardsPool.abi,
+  new VeChainPrivateKeySigner(Buffer.from(ADMIN_PRIVATE_KEY), new VeChainProvider(thor)), 
+)

@@ -40,14 +40,14 @@ module.exports = {
             count: 10,
         },
         vechain_testnet: {
-            url: process.env.TESTNET_URL ?? '',
+            url: process.env.TESTNET_URL ?? 'https://testnet.vechain.org',
             accounts: {
-                mnemonic: process.env.MNEMONIC ?? '',
+                mnemonic: process.env.MNEMONIC ?? 'denial kitchen pet squirrel other broom bar gas better priority spoil cross',
                 count: 10,
                 path: "m/44'/818'/0'/0",
             },
             restful: true,
-            gas: 10000000,
+            gas: 1,
             count: 10,
         },
         vechain_mainnet: {
