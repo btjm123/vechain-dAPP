@@ -1,30 +1,35 @@
 import { Card, Flex } from "@chakra-ui/react";
+import { LuPackageOpen } from "react-icons/lu";
+import { PiPlantFill } from "react-icons/pi";
+import { GiReceiveMoney } from "react-icons/gi";
 import { Step } from "./Step";
 
 const Steps = [
   {
-    icon: "/steps/1.svg",
-    title: "Purchase eco-friendly products",
-    description: "Buy products that are eco-friendly and sustainable.",
+    icon: PiPlantFill,
+    title: "Return your used packagings",
+    description:
+      "Bring your old packagings to the drop point and reduce waste.",
   },
   {
-    icon: "/steps/2.svg",
-    title: "Upload the receipt",
-    description: "Upload your receipt and AI will verify the products.",
+    icon: LuPackageOpen,
+    title: "Upload the deposit",
+    description:
+      "Upload your pictures and AI will verify the quality of the packaging.",
   },
   {
-    icon: "/steps/3.svg",
+    icon: GiReceiveMoney,
     title: "Earn rewards",
-    description: "Earn B3TR for purchasing eco-friendly products.",
+    description: "Earn B3TR for returning eco-friendly products.",
   },
 ];
 
 export const Instructions = () => {
   return (
-    <Card mt={3} w={"full"}>
+    <Card mt={2} w={"full"} p={2}>
       <Flex p={{ base: 4 }} w="100%" direction={{ base: "column", md: "row" }}>
         {Steps.map((step, index) => (
-          <Step key={index} {...step} />
+          <Step key={index} {...step} /> // Adds margin-bottom to each step/>
         ))}
       </Flex>
     </Card>

@@ -1,14 +1,15 @@
 import { DAppKitProvider } from "@vechain/dapp-kit-react";
-import { ChakraProvider, Container, Flex } from "@chakra-ui/react";
-import {
-  Dropzone,
-  Footer,
-  InfoCard,
-  Instructions,
-  Navbar,
-  SubmissionModal,
-} from "./components";
+import { ChakraProvider } from "@chakra-ui/react";
 import { lightTheme } from "./theme";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { LoginPage } from "./pages/LoginPage";
+import { HomePage } from "./pages/HomePage";
+import { Uploadimage } from "./pages/Uploadimage";
+import RegisterDroppoint from "./pages/RegisterDroppoint";
+import { RegisterPage } from "./pages/RegisterPage";
+import { SelectRolePage } from "./pages/SelectRolePage";
+import { SelectDropoffLocationPage } from "./pages/SelectDropoffLocationPage";
+import { SellerSnap } from "./pages/SellerSnap";
 
 function App() {
   return (
@@ -20,27 +21,27 @@ function App() {
         nodeUrl="https://testnet.vechain.org/"
         logLevel={"DEBUG"}
       >
-        <Navbar />
-        <Flex flex={1}>
-          <Container
-            mt={{ base: 4, md: 10 }}
-            maxW={"container.xl"}
-            mb={{ base: 4, md: 10 }}
-            display={"flex"}
-            flex={1}
-            alignItems={"center"}
-            justifyContent={"flex-start"}
-            flexDirection={"column"}
-          >
-            <InfoCard />
-            <Instructions />
-            <Dropzone />
-          </Container>
-        </Flex>
-        <Footer />
-
-        {/* MODALS  */}
-        <SubmissionModal />
+        <Router>
+          <div>
+            <Routes>
+              <Route path="/upload" element={<Uploadimage />} />
+              <Route
+                path="/select-dropoff-location"
+                element={<SelectDropoffLocationPage />}
+              />
+              <Route path="/login" element={<LoginPage />} />
+              <Route path="/register" element={<RegisterPage />} />
+              <Route path="/home" element={<HomePage />} />
+              <Route path="/select-role" element={<SelectRolePage />} />
+              <Route path="/seller-snap" element={<SellerSnap />} />
+              <Route path="/" element={<HomePage />} />
+              <Route
+                path="/registerdroppoint"
+                element={<RegisterDroppoint />}
+              />
+            </Routes>
+          </div>
+        </Router>
       </DAppKitProvider>
     </ChakraProvider>
   );

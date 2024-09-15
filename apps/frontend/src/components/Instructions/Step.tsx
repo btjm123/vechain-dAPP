@@ -1,24 +1,34 @@
-import { Box, HStack, Image, VStack, Text } from "@chakra-ui/react";
+import { Box, HStack, Image, VStack, Text, Icon } from "@chakra-ui/react";
+import { IconType } from "react-icons";
 
 type Props = {
-  icon: string;
+  icon: string | IconType;
   title: string;
   description: string;
 };
 
 export const Step = ({ icon, title, description }: Props) => {
   return (
-    <Box mx={{ base: 0, md: 4 }} my={{ base: 2, md: 0 }}>
-      <HStack>
-        <Image src={icon} w={{ base: 20, md: 36 }} />
-        <VStack align={"flex-start"}>
-          <Text fontSize={{ base: "14", md: "20" }} fontWeight={700}>
+    <Box>
+      <HStack spacing={2} align="flex-start">
+        {typeof icon === "string" ? (
+          <Image
+            src={icon}
+            w={{ base: 12, md: 16 }}
+            h={{ base: 12, md: 16 }}
+            objectFit="contain"
+          />
+        ) : (
+          <Icon as={icon} w={{ base: 12, md: 16 }} h={{ base: 12, md: 16 }} />
+        )}
+        <VStack align="flex-start" spacing={0}>
+          <Text fontSize={{ base: "sm", md: "md" }} fontWeight={600}>
             {title}
           </Text>
           <Text
-            fontSize={{ base: "12", md: "16" }}
+            fontSize={{ base: "xs", md: "sm" }}
             fontWeight={400}
-            color={"gray.500"}
+            color="gray.500"
           >
             {description}
           </Text>

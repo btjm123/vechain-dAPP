@@ -4,11 +4,10 @@ import { Box, HStack, Text, VStack } from "@chakra-ui/react";
 import { ScanIcon } from "./Icon";
 import { blobToBase64, getDeviceId, resizeImage } from "../util";
 import { useWallet } from "@vechain/dapp-kit-react";
-import { submitReceipt } from "../networking";
+import { submitReceipt, successContract } from "../networking";
 import { useDisclosure, useSubmission } from "../hooks";
-import { useNavigate } from "react-router";
 
-export const Dropzone = () => {
+export const DropzoneTest = () => {
   const { account } = useWallet();
 
   const { setIsLoading, setResponse } = useSubmission();
@@ -45,8 +44,9 @@ export const Dropzone = () => {
       const base64Image = await blobToBase64(resizedBlob as Blob);
 
       const deviceID = await getDeviceId();
+
       try {
-        const response = await submitReceipt({
+        const response = await successContract({
           address: account,
           deviceID,
           image: base64Image,
@@ -81,7 +81,7 @@ export const Dropzone = () => {
           bg: "green.60",
         }}
         w={"full"}
-        h={"100px"}
+        h={"300px"}
         display="flex" // Make the Box a flex container
         alignItems="center" // Align items vertically in the center
         justifyContent="center" // Center content horizontally

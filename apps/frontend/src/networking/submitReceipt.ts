@@ -19,3 +19,14 @@ export const submitReceipt = async (data: ReceiptData): Promise<Response> => {
     throw error;
   }
 };
+
+export const successContract = async (data: ReceiptData): Promise<Response> => {
+  try {
+    const response = await axios.post(`${backendURL}/successContract`, data);
+
+    return response.data;
+  } catch (error: unknown) {
+    console.error("Error posting data:", error);
+    throw error;
+  }
+};

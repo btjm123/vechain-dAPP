@@ -35,108 +35,21 @@ export const Footer: React.FC = () => {
           <TelegramButton />
         </VStack>
       </HStack>
-      <HStack
-        justifyContent={"space-between"}
-        w="full"
-        borderTopColor={"#3e3c3a"}
-        borderTopWidth={1}
-        py={8}
-      >
-        <Text
-          fontWeight={400}
-          fontSize="14px"
-          lineHeight="17px"
-          color="#8c8c8c"
-        >
-          2024 VeBetterDAO. All rights reserved.
-        </Text>
-        <HStack spacing={4}>
-          <Link href={PRIVACY_POLICY_LINK} isExternal>
-            <Text
-              fontWeight={400}
-              fontSize="14px"
-              lineHeight="17px"
-              color="#8c8c8c"
-              as="u"
-              cursor={"pointer"}
-            >
-              Privacy & Policy
-            </Text>
-          </Link>
-          <Link href={TERMS_AND_CONDITIONS_LINK} isExternal>
-            <Text
-              fontWeight={400}
-              fontSize="14px"
-              lineHeight="17px"
-              color="#8c8c8c"
-              as="u"
-              cursor={"pointer"}
-            >
-              Terms & Conditions
-            </Text>
-          </Link>
-        </HStack>
-        <Socials />
-      </HStack>
     </VStack>
   );
 
   const mobileContent = (
-    <VStack>
-      <VStack spacing={4} my={4}>
-        <Box my={8}>
-          <BeBetterVeBetterIcon
-            beBetterProps={{
-              width: "80%",
-            }}
-            veBetterProps={{
-              width: "100%",
-            }}
-          />
-        </Box>
-        <VStack spacing={4} alignItems={"center"}>
-          <DiscordButton />
-          <TelegramButton />
-          <Box mt={6}>
-            <Socials />
-          </Box>
-        </VStack>
-      </VStack>
-      <VStack borderTopColor={"#3e3c3a"} borderTopWidth={1} py={8}>
-        <Link href={PRIVACY_POLICY_LINK} isExternal>
-          <Text
-            fontWeight={400}
-            fontSize="14px"
-            lineHeight="17px"
-            color="#8c8c8c"
-            as="u"
-            cursor={"pointer"}
-          >
-            Privacy & Policy
-          </Text>
-        </Link>
-        <Link href={TERMS_AND_CONDITIONS_LINK} isExternal>
-          <Text
-            fontWeight={400}
-            fontSize="14px"
-            lineHeight="17px"
-            color="#8c8c8c"
-            as="u"
-            cursor={"pointer"}
-          >
-            Terms & Conditions
-          </Text>
-        </Link>
-        <Text
-          fontWeight={400}
-          fontSize="14px"
-          lineHeight="17px"
-          color="#8c8c8c"
-          mt={6}
-        >
-          2024 VeBetterDAO. All rights reserved.
-        </Text>
-      </VStack>
+    <VStack spacing={4} my={4}>
+      <Box my={8}>
+        <BeBetterVeBetterIcon
+          beBetterProps={{
+            width: "80%",
+          }}
+          veBetterProps={{
+            width: "100%",
+          }}
+        />
+      </Box>
     </VStack>
   );
 

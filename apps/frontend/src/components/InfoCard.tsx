@@ -33,7 +33,7 @@ export const InfoCard = () => {
               mt={{ base: 4, md: 0 }}
               direction={{ base: "column", md: "row" }}
             >
-              <Link isExternal href="https://github.com/vechain/x-app-template">
+              <Link isExternal href="./LearnMore">
                 <Button
                   rounded={"full"}
                   colorScheme="primary"
@@ -42,7 +42,7 @@ export const InfoCard = () => {
                   mt={{ base: 2, md: 0 }}
                   ml={{ base: 0, md: 2 }}
                 >
-                  Github repository
+                  Learn More
                 </Button>
               </Link>
             </Flex>

@@ -6,3 +6,5 @@ export * from "./Instructions";
 export * from "./Dropzone";
 export * from "./Footer";
 export * from "./SubmissionModal";
+export * from "./Navbar2";
+export * from "./DropzoneSuccess";
